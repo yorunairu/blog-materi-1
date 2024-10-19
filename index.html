@@ -8,12 +8,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .marquee {
+            background-color: #17a2b8;
+        }
+        .card-img-top {
+            height: 150px;
+            object-fit: cover;
+        }
+    </style>
 </head>
-<body class="bg-light">
+<body>
     <div class="container">
         <!-- Header with logo -->
         <div class="row">
-            <div class="col-12 text-center">
+            <div class="col-12 text-center my-4">
                 <img src="logo.png" alt="logo" class="img-fluid">
             </div>
         </div>
@@ -21,19 +33,33 @@
         <!-- Marquee -->
         <div class="row">
             <div class="col-12">
-                <marquee behavior="" direction="right" class="bg-info text-white p-2">Selamat datang di blog saya, selamat belajar.</marquee>
+                <marquee behavior="" direction="right" class="text-white p-2 marquee">Selamat datang di blog saya, selamat belajar.</marquee>
             </div>
         </div>
 
         <!-- Navigation -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Fashion</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Technology</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Anime</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Sport</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg navbar-dark sticky-top bg-info">
+            <a class="navbar-brand" href="#">Blog</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Categories
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Fashion</a>
+                            <a class="dropdown-item" href="#">Technology</a>
+                            <a class="dropdown-item" href="#">Anime</a>
+                            <a class="dropdown-item" href="#">Sport</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#">Tags</a></li>
+                </ul>
+            </div>
         </nav>
 
         <!-- Main content section -->
@@ -119,5 +145,4 @@
 <footer class="bg-dark text-white text-center py-3 mt-4">
     <p>Created by Lian &copy; 2024</p>
 </footer>
-
 </html>
